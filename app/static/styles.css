@@ -4,18 +4,23 @@
     margin: 0;
     background: #FAFAFA;
     font-family: Arial, sans-serif;
+    max-width: 100%;
+    overflow-x: hidden;
   }
   
   .header {
+    min-height: 45px;
     width: 100%;
     height: 10vh;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
     background: #333;
     color: #FFF;
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 0 16px;
+    position: fixed;
+    z-index: 3;
   }
 
   .header-compacted {
@@ -26,28 +31,179 @@
   .header-expanded {
     width: 100%;
     height: 85vh;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
     background: #333;
     color: #FFF;
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 0 16px;
+    z-index: 3;
+  }
+  
+
+
+  .parallax { 
+    background-image: url("../images/TapestryForTheDisappearingPeople.jpg");
+    height: 75vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
-  /* .header::after {
-    width: 100%;
-    height: 85vh;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.4);
-    background: #333;
-    color: #FFF;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0 16px;
-    transform: translateY(0vh);
+
+  .headerImg {
+    min-height: 50vh;
+    max-height: 65vh;
+    min-width: 100vw;
   }
-   */
+
+  .headerImgTwo {
+    padding-top: 5vh;
+    padding-bottom: 1vh;
+    width: 100%;
+    max-width: 785px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .mainImageHolder {
+    width: 100%;
+    right: 50;
+    text-align: center;  
+  }
+
+  .imgDescription {
+    margin-bottom: 4vh;
+  }
+
+  
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (max-device-width : 500px) {
+  .profileImg {
+    width: 74vw;
+    position: absolute;
+    min-height: 35vh;
+    top: 50vh;
+    left: 13vw;
+    border: 5px solid #fff;
+    border-radius: 3px;
+    box-shadow: 0px -20px 20px 0px grey; 
+  }
+
+  
+  .frontPageTextBoxHeader {
+    height: 20vh;
+    box-shadow: 0px -20px 20px 0px grey;
+  }
+
+  .headerText {
+    padding-top: 20vh;
+    text-align: center;
+    margin-top: 0px !important;
+  }
+
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 501px) and (max-device-width : 767px) {
+  .profileImg {
+    width: 74vw;
+    max-height: 55vh;
+    min-height: 50vh;
+    position: absolute;
+    top: 35vh;
+    /* right: 40vw; */
+    left: 13vw;
+    border: 5px solid #fff;
+    border-radius: 3px;
+    box-shadow: 3px 3px 8px grey;
+  }
+
+  
+  .frontPageTextBoxHeader {
+    height: 30vh;
+    box-shadow: 0px -20px 20px 0px grey;
+  }
+
+  .headerText {
+    padding-top: 20vh;
+    margin-bottom: 5vh;
+    text-align: center;
+    margin-top: 0px !important;
+  }
+
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .profileImg {
+      min-width: 40vw;
+      min-height: 35vh;
+      max-width: 50vw;
+      max-height: 50vh;
+      position: absolute;
+      top: 50vh;
+      right: 8vw;
+      border: 5px solid #fff;
+      border-radius: 3px;
+      box-shadow: 3px 3px 8px grey;
+    }
+
+  
+    .frontPageTextBoxHeader {
+      box-shadow: 0px -20px 20px 0px grey;
+      height: 15vh;
+      min-height: 130px;
+      padding-left: 5vw;
+      padding-right: 60vw;
+    }
+
+    
+    .headerText {
+      padding-top: 12vh;
+      text-align: left;
+      padding-left: 5vw;
+      margin-top: 0px !important;
+    }
+  
+
+  }
+
+  @media only screen and (min-device-width : 1025px) {
+
+  .profileImg {
+    min-width: 35vw;
+    min-height: 40vh;
+    max-width: 45vw;
+    max-height: 50vh;
+    position: absolute;
+    top: 45vh;
+    right: 10vw;
+    border: 5px solid #fff;
+    border-radius: 3px;
+    box-shadow: 3px 3px 8px grey;
+  }
+
+
+  .frontPageTextBoxHeader {
+    box-shadow: 0px -20px 20px 0px grey;
+    height: 15vh;
+    padding-left: 5vw;
+    padding-right: 55vw;
+  }
+
+
+  .headerText {
+    padding-top: 12vh;
+    text-align: left;
+    padding-left: 5vw;
+    margin-top: 0px !important;
+  }
+}
+
+
   .header__menu-toggle {
     background: none;
     border: none;
@@ -64,12 +220,14 @@
 
   .menu-button {
     outline: none !important;
-    position: absolute;
+    position: fixed;
     top: 0;
-    padding-top: 3.5vh;
+    padding-top: 2.5vh;
     height: 10vh;
     padding-right: 1vw;
     right: 15px;
+    z-index: 4;
+
   }
 
   .menu-title {
@@ -82,8 +240,33 @@
     margin: 0;
     line-height: 10vh;
     left: 15vw;
+    z-index: 4;
   }
 
+  .frontPageTextBox {
+    padding: 3rem;
+  }
+
+  .frontPageCard {
+    width: 200px;
+    height: 350px;
+    margin-right: 5vw;
+    margin-left: 5vw;
+    border: 1px solid rgba(0, 0, 0, 1);
+    border-radius: 10px;
+    margin-top: 10vh;
+    box-shadow: 3px 3px 10px grey;
+    display: inline-block;
+  }
+
+  .cardFooter {
+    border-top: 1px solid #333;
+    margin-top: 225px;
+  }
+
+
+
+  /* Transforming the header */
   .transformNavUp {
     height: 85vh;
     animation: transformNavTop 1s;
@@ -230,7 +413,7 @@
     line-height: 10vh;
     padding-left: 15vw;
     padding-right: 15vw;
-    font-size: 50px;
+    font-size: 2rem;
     color: #CCC;
   }
   

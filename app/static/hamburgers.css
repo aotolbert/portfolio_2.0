@@ -10,6 +10,7 @@
     cursor: pointer;
     transition-property: opacity, filter;
     transition-duration: 0.15s;
+    outline: none !important;
     transition-timing-function: linear;
     font: inherit;
     color: inherit;
@@ -28,7 +29,7 @@
       background-color: #CCC; }
   
   .hamburger-box {
-    width: 40px;
+    width: 35px;
     height: 24px;
     display: inline-block;
     position: relative; }
@@ -38,7 +39,7 @@
     top: 50%;
     margin-top: -2px; }
     .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-      width: 40px;
+      width: 35px;
       height: 4px;
       background-color: #CCC;
       border-radius: 4px;
