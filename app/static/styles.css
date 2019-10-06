@@ -5,7 +5,6 @@
     background: #FAFAFA;
     font-family: Arial, sans-serif;
     max-width: 100%;
-    overflow-x: hidden;
   }
   
   .header {
@@ -79,116 +78,38 @@
   }
 
   
-/* iPads (portrait and landscape) ----------- */
-@media only screen and (max-device-width : 500px) {
-  .profileImg {
-    width: 74vw;
-    position: absolute;
-    min-height: 35vh;
-    top: 50vh;
-    left: 13vw;
-    border: 5px solid #fff;
-    border-radius: 3px;
-    box-shadow: 0px -20px 20px 0px grey; 
-  }
 
-  
-  .frontPageTextBoxHeader {
-    height: 20vh;
-    box-shadow: 0px -20px 20px 0px grey;
-  }
-
-  .headerText {
-    padding-top: 20vh;
-    text-align: center;
-    margin-top: 0px !important;
-  }
-
+  .frontPageCard {
+    min-width: 80vw;
+    height: 60vh;
+    /* padding-right: 2vw; */
+    margin-right: 10vw;
+    margin-left: 10vw;
+    border: 1px solid rgba(0, 0, 0, 1);
+    border-radius: 10px;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    box-shadow: 3px 3px 10px grey;
+    display: inline-block;
+    scroll-snap-align: center;
+    /* animation: pullOutCard 5s linear; */
+    /* animation-play-state: paused; */
+    background-color: #FAFAFA;
 }
 
-/* iPads (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 501px) and (max-device-width : 767px) {
-  .profileImg {
-    width: 74vw;
-    max-height: 55vh;
-    min-height: 50vh;
-    position: absolute;
-    top: 35vh;
-    /* right: 40vw; */
-    left: 13vw;
-    border: 5px solid #fff;
-    border-radius: 3px;
-    box-shadow: 3px 3px 8px grey;
-  }
-
-  
-  .frontPageTextBoxHeader {
-    height: 30vh;
-    box-shadow: 0px -20px 20px 0px grey;
-  }
-
-  .headerText {
-    padding-top: 20vh;
-    margin-bottom: 5vh;
-    text-align: center;
-    margin-top: 0px !important;
-  }
-
+.spacer {
+  min-width: 10vw;
 }
 
-/* iPads (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-    .profileImg {
-      min-width: 40vw;
-      min-height: 35vh;
-      max-width: 50vw;
-      max-height: 50vh;
-      position: absolute;
-      top: 50vh;
-      right: 8vw;
-      border: 5px solid #fff;
-      border-radius: 3px;
-      box-shadow: 3px 3px 8px grey;
-    }
 
-  
-    .frontPageTextBoxHeader {
-      box-shadow: 0px -20px 20px 0px grey;
-      height: 15vh;
-      min-height: 130px;
-      padding-left: 5vw;
-      padding-right: 60vw;
-    }
-
-    
-    .headerText {
-      padding-top: 12vh;
-      text-align: left;
-      padding-left: 5vw;
-      margin-top: 0px !important;
-    }
-  
-
-  }
-
-  @media only screen and (min-device-width : 1025px) {
-
-  .profileImg {
-    min-width: 35vw;
-    min-height: 40vh;
-    max-width: 45vw;
-    max-height: 50vh;
-    position: absolute;
-    top: 45vh;
-    right: 10vw;
-    border: 5px solid #fff;
-    border-radius: 3px;
-    box-shadow: 3px 3px 8px grey;
+  .frontPageCard div:hover {
+    /* Toggle our animation play state to running when we are hovering over our sticker */
+    /* animation-play-state: running; */
+    background-color: red;
   }
 
 
   .frontPageTextBoxHeader {
-    box-shadow: 0px -20px 20px 0px grey;
     height: 15vh;
     padding-left: 5vw;
     padding-right: 55vw;
@@ -201,7 +122,7 @@
     padding-left: 5vw;
     margin-top: 0px !important;
   }
-}
+
 
 
   .header__menu-toggle {
@@ -247,24 +168,97 @@
     padding: 3rem;
   }
 
-  .frontPageCard {
-    width: 200px;
-    height: 350px;
-    margin-right: 5vw;
-    margin-left: 5vw;
-    border: 1px solid rgba(0, 0, 0, 1);
-    border-radius: 10px;
-    margin-top: 10vh;
-    box-shadow: 3px 3px 10px grey;
-    display: inline-block;
+  @keyframes pullOutCard {
+    0% { transform: scale(1); }
+    100% { transform: scale(2); }
+  }
+
+  .cardContainer {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    background-color: lightgray;
+    border: black;
+    border-width: 2px;
+    border-top: 1px solid rgba(0, 0, 0, 1);
+    border-bottom: 1px solid rgba(0, 0, 0, 1);
+    box-shadow: inset 0px 0px 20px 0px grey;
+  }
+
+  .cardImageContainer {
+    overflow: hidden;
+    height: 45vh;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .cardImage {
+    width: 80vw;
+    min-height: 225px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
   }
 
   .cardFooter {
     border-top: 1px solid #333;
-    margin-top: 225px;
+    background-color: #FAFAFA;
+  }
+
+  
+  .header-content li {
+    height: 10vh;
+    line-height: 10vh;
+    padding-left: 15vw;
+    padding-right: 15vw;
+    font-size: 2rem;
+    color: #CCC;
+  }
+  
+  .header-content li:hover {
+    background: #CCC;
+  }
+
+  .header-content li a {
+    color: white;
+    text-decoration: none; /* no underline */
+    display: block;
   }
 
 
+  .footer {
+    height: 25vh;
+    background: #333;
+  }
+
+  .footerLinksContainer {
+    height: 100%;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+    padding-right: 5vw;
+    padding-left: 5vw;
+  }
+
+  .footerLinksContainer > li {
+    color: white;
+    text-align: center;
+  }
+
+  .footerLinksContainer li a {
+    color: white;
+    text-decoration: none; /* no underline */
+    display: block;
+  }
+
+
+
+
+
+
+  /* **************** HEADER TRANSITIONS AND ANIMATIONS **************** */
 
   /* Transforming the header */
   .transformNavUp {
@@ -407,22 +401,122 @@
   
   
 
+
+
+
+
+
+/* ************ MEDIA QUERIES ************ */
   
-  .header-content li {
-    height: 10vh;
-    line-height: 10vh;
-    padding-left: 15vw;
-    padding-right: 15vw;
-    font-size: 2rem;
-    color: #CCC;
-  }
   
-  .header-content li:hover {
-    background: #CCC;
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (max-device-width : 500px) {
+  .profileImg {
+    width: 74vw;
+    position: absolute;
+    min-height: 35vh;
+    top: 50vh;
+    left: 13vw;
+    border: 5px solid #fff;
+    border-radius: 3px;
+    box-shadow: 0px -20px 20px 0px grey; 
   }
 
-  .header-content li a {
-    color: white;
-    text-decoration: none; /* no underline */
-    display: block;
+  .frontPageCard {
+    min-width: 80vw !important;
+    margin-right: 20vw !important;
   }
+
+  
+  .frontPageTextBoxHeader {
+    height: 20vh;
+    padding-right: 5vw;
+  }
+
+  .headerText {
+    padding-top: 20vh;
+    text-align: center;
+    margin-top: 0px !important;
+  }
+
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 501px) and (max-device-width : 767px) {
+  .profileImg {
+    width: 74vw;
+    max-height: 55vh;
+    min-height: 50vh;
+    position: absolute;
+    top: 35vh;
+    /* right: 40vw; */
+    left: 13vw;
+    border: 5px solid #fff;
+    border-radius: 3px;
+    box-shadow: 3px 3px 8px grey;
+  }
+
+  
+  .frontPageTextBoxHeader {
+    height: 30vh;
+    padding-right: 5vw;
+  }
+
+  .headerText {
+    padding-top: 20vh;
+    margin-bottom: 5vh;
+    text-align: center;
+    margin-top: 0px !important;
+  }
+
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .profileImg {
+      min-width: 40vw;
+      min-height: 35vh;
+      max-width: 50vw;
+      max-height: 50vh;
+      position: absolute;
+      top: 50vh;
+      right: 8vw;
+      border: 5px solid #fff;
+      border-radius: 3px;
+      box-shadow: 3px 3px 8px grey;
+    }
+
+  
+    .frontPageTextBoxHeader {
+      height: 15vh;
+      min-height: 130px;
+      padding-left: 5vw;
+      padding-right: 60vw;
+    }
+
+    
+    .headerText {
+      padding-top: 12vh;
+      text-align: left;
+      padding-left: 5vw;
+      margin-top: 0px !important;
+    }
+  
+
+  }
+
+  @media only screen and (min-device-width : 1025px) {
+
+  .profileImg {
+    min-width: 35vw;
+    min-height: 40vh;
+    max-width: 45vw;
+    max-height: 50vh;
+    position: absolute;
+    top: 45vh;
+    right: 10vw;
+    border: 5px solid #fff;
+    border-radius: 3px;
+    box-shadow: 3px 3px 8px grey;
+  }
+}
