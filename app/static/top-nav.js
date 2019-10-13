@@ -11,6 +11,8 @@ toggleHeader = () => {
         return;
     } else if(selfEl.classList.contains("is-active")) {
         selfEl.classList.remove("is-active");
+        document.getElementsByTagName("BODY")[0].classList.remove("stop-scrolling");
+        document.querySelector(".header-content").classList.add(".avoid-clicks");
         document.querySelector(".header").classList.add("animating");
         document.querySelector(".header").classList.add("transformNavUp");
         document.querySelector(".menu-title").classList.add("titleFadeIn");
@@ -31,6 +33,8 @@ toggleHeader = () => {
         });
     } else {
         selfEl.classList.add("is-active");
+        document.getElementsByTagName("BODY")[0].classList.add("stop-scrolling");
+        document.querySelector(".header-content").classList.remove(".avoid-clicks");
         document.querySelector(".header").classList.add("animating");
         document.querySelector(".header").classList.remove("transformNavUp");
         document.querySelector(".header").classList.add("transformNavDown");
