@@ -1,6 +1,5 @@
 document.querySelector(".hamburger").addEventListener("click", () => {
     toggleHeader();
-
 });
 
 

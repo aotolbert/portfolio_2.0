@@ -31,6 +31,10 @@ router.get("/work", (req, res) => {
     res.sendFile(path.join(__dirname, "../app/work.html"));
 })
 
+router.get("/contact", (req, res) => {
+    res.sendFile(path.join(__dirname, "../app/contact.html"));
+})
+
 router.get('/sw.js', (req, res) => {
     console.log(__dirname)
 const input = fs.createReadStream(`${__dirname}/../app/sw.js`);

@@ -22,7 +22,7 @@
   </div>
 
     <h2 class="menu-title">
-        My Work
+        Contact Me
     </h2>
     <div class="menu-button">
         <div class="hamburger hamburger--elastic" tabindex="0" aria-label="Menu" role="button" aria-controls="navigation">
@@ -34,11 +34,28 @@
 
     <div class="parallax"></div>   
 
-        <script src='./top-nav.js'></script>
-        <script src='../app.js'></script>
+    <h1 style="width: 100%; text-align: center; padding-top: 5vh;">Send me an Email to get in touch!</h1>
+
+
+    <div class="contactFormContainer">
+
+        <form class="contactForm">
+
+            <input class="inputFieldType1" type="text" id="firstName" name="firstName" placeholder="First" required/>
+            <input class="inputFieldType1" type="text" id="lastName" name="lastName" placeholder="Last" required/>
+            <input class="inputFieldType2" type="email" id="returnEmailAddress" name="returnEmailAddress" autocomplete="off" required placeholder="example@email.com"/>
+            <textarea class="messageBodyInput" id="commentsection" rows="5"></textarea>
+            <input type="submit">
+
+        </form>
+    </div>
+
+    <script src='./top-nav.js'></script>
+    <script src='../app.js'></script>
 
     <script>
 
+        // Do some emailing here
 
     </script>
 </body>
