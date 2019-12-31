@@ -16,19 +16,19 @@ router.use((req, res, next) => {
   });
 
 router.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "../app/static/index.html"));
+    res.sendFile(path.join(__dirname, "../app/index.html"));
 })
 
 router.get("/offline", (req, res) => {
-    res.sendFile(path.join(__dirname, "../app/static/offline.html"));
+    res.sendFile(path.join(__dirname, "../app/offline.html"));
 })
 
 router.get("/about", (req, res) => {
-    res.sendFile(path.join(__dirname, "../app/static/about.html"));
+    res.sendFile(path.join(__dirname, "../app/about.html"));
 })
 
 router.get("/work", (req, res) => {
-    res.sendFile(path.join(__dirname, "../app/static/work.html"));
+    res.sendFile(path.join(__dirname, "../app/work.html"));
 })
 
 router.get('/sw.js', (req, res) => {
@@ -37,9 +37,9 @@ const input = fs.createReadStream(`${__dirname}/../app/sw.js`);
 
 const toCache = [
   './index.html',
-  './static/offline.html',
-  './static/styles.css',
-  './static/debatinator.js'
+  './offline.html',
+  './styles.css',
+  './debatinator.js'
 ]
 
 res.set('Cache-Control', 'public, max-age=31557600'); // one year
