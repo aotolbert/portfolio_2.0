@@ -11,9 +11,9 @@ const app = express();
 
 app.use(express.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-var publicDir = require('path').join(__dirname,'/app');
 
-app.use('/node_modules', express.static('node_modules'));
+var publicDir = require('path').join(__dirname,'/app');
+// app.use('/node_modules', express.static('node_modules'));
 app.use(express.static(publicDir));
 
 var routes = require("./routes/routes.js");
