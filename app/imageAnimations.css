@@ -1,0 +1,103 @@
+.imageCaptionContainerLeft {
+    z-index: -1;
+    contain: content;
+    padding: 5vw;
+    color: honeydew;
+    position: absolute;
+    background-color: grey;
+    height: 200px;
+    width: 70vw;
+    min-width: 250px;
+    bottom: -25vh;
+    right: 10vw;
+}
+
+.imageCaptionContainerRight {
+    z-index: -1;
+    contain: content;
+    padding: 5vw;
+    color: honeydew;
+    position: absolute;
+    background-color: grey;
+    height: 200px;
+    width: 70vw;
+    min-width: 250px;
+    bottom: -25vh;
+    left: 20vw;
+}
+
+.mainImgLeftContainerBefore {
+    opacity: 0;
+    width: 90vw;
+    left: 70vw;
+    text-align: center;  
+}
+
+.mainImgLeftContainerAfter  {
+    opacity: 1;
+    width: 90vw;
+    text-align: center;  
+}
+
+.mainImgRightContainerBefore {
+    opacity: 0;
+    width: 90vw;
+    right: 10vw;
+    text-align: center;  
+}
+
+
+.mainImgRightContainerAfter {
+    opacity: 1;
+    width: 90vw;
+    text-align: center;
+}
+
+.spacerGif {
+    min-width: 15vw;
+    position: relative;
+}
+
+.headerImgRight {
+    padding-top: 5vh;
+    padding-bottom: 1vh;
+    width: 80vw;
+    max-width: 855px;
+    /* margin-right: auto; */
+    margin-left: 20vw;
+}
+
+.headerImgLeft {
+    padding-top: 5vh;
+    padding-bottom: 1vh;
+    width: 80vw;
+    max-width: 855px;
+    margin-right: 20vw;
+    /* margin-left: auto; */
+}
+
+
+.fadeInRightImage {
+    right: 0;
+    animation: fadeInOpacity 3s;
+    -webkit-transition: -webkit-transform 2s; /* Safari */
+    transition: opacity 2s transform 2s;
+    -webkit-transform: translateX(-10vw); /* Safari */
+    transform: translateX(-10vw);
+}
+
+.fadeInLeftImage {
+    left: 0;
+    animation: fadeInOpacity 3s;
+    -webkit-transition: -webkit-transform 2s; /* Safari */
+    transition: opacity 2s transform 2s;
+    -webkit-transform: translateX(10vw); /* Safari */
+    transform: translateX(10vw);
+}
+
+
+@keyframes fadeInOpacity {
+    0% {opacity: 0; }
+    100% {opacity: 1; }
+ }
+

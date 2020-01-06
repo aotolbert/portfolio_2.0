@@ -64,26 +64,12 @@
   }
 
 
-  .headerImg {
+  .titleImg {
     min-height: 50vh;
     max-height: 65vh;
     min-width: 100vw;
   }
 
-  .headerImgTwo {
-    padding-top: 5vh;
-    padding-bottom: 1vh;
-    width: 100%;
-    max-width: 785px;
-    margin-right: auto;
-    margin-left: auto;
-  }
-
-  .mainImageHolder {
-    width: 100%;
-    right: 50;
-    text-align: center;  
-  }
 
   .imgDescription {
     margin-bottom: 4vh;
@@ -172,7 +158,10 @@
   }
 
   .frontPageTextBox {
-    padding: 3rem;
+    padding-bottom: 5vh;
+    padding-left: 5vw;
+    margin-top: 30vh;
+    padding-right: 5vw;
   }
 
   @keyframes pullOutCard {
