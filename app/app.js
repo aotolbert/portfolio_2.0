@@ -39,7 +39,9 @@ window.addEventListener('scroll', (evt) => {
     })
     
 
-})
+});
+
+
 
 
 

@@ -1,105 +1,58 @@
 <!doctype html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="author" content="Paul Lewis" />
-  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-  <meta name="theme-color" content="#FF00FF">
-  <title>The Nerve Museum</title>
-  <link rel="stylesheet" href="./styles.css">
-  <link href="./hamburgers.css" rel="stylesheet">
-</head>
-<body>
-    <div class="header">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Paul Lewis" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <meta name="theme-color" content="#FF00FF">
+    <title>The Nerve Museum</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link href="./hamburgers.css" rel="stylesheet">
+  </head>
+  <body>
+      <div class="header">
 
-      <ul class="header-content hidden">
-          <li><a href="./" id="header1">- Home</a></li>
-          <li><a href="./about" id="header2">- About</a></li>
-          <li><a href="./work" id="header3">- My Work</a></li>
-          <li><a href="./offline" id="header4">- Upcoming</a></li>
-          <li><a href="./contact" id="header5">- Contact</a></li>
+        <ul class="header-content hidden">
+            <li><a href="./" id="header1">- Home</a></li>
+            <li><a href="./about" id="header2">- About</a></li>
+            <li><a href="./work" id="header3">- My Work</a></li>
+            <li><a href="./upcoming" id="header4">- Upcoming</a></li>
+            <li><a href="./contact" id="header5">- Contact</a></li>
+        </ul>
+    </div>
+
+      <h2 class="menu-title">
+          My Work
+      </h2>
+      <div class="menu-button">
+          <div class="hamburger hamburger--elastic" tabindex="0" aria-label="Menu" role="button" aria-controls="navigation">
+              <div class="hamburger-box">
+                <div class="hamburger-inner"></div>
+              </div>
+            </div>
+      </div>
+
+      <div class="parallax"></div>   
+
+    <div class="frontPageTextBox">
+
+      <div class="workItemsContainer">
+      </div>
+    
+    </div>
+
+    <div class="footer">
+      <ul class="footerLinksContainer">
+          <li><a href="./">Home</a></li>
+          <li><a href="./about">About</a></li>
+          <li><a href="./work">My Work</a></li>
+          <li><a href="./offline">Upcoming</a></li>
       </ul>
   </div>
 
-    <h2 class="menu-title">
-        My Work
-    </h2>
-    <div class="menu-button">
-        <div class="hamburger hamburger--elastic" tabindex="0" aria-label="Menu" role="button" aria-controls="navigation">
-            <div class="hamburger-box">
-              <div class="hamburger-inner"></div>
-            </div>
-          </div>
-    </div>
+    <script src='./top-nav.js'></script>
+    <script src='./app.js'></script>
+    <script src="./work.js"></script>
 
-    <div class="parallax"></div>   
-
-    <div class="cardContainer">
-      <div class="frontPageCard">
-          <div class="cardImageContainer" style="background-image: url('../images/Tom_circa_1980.jpg')">
-              <!-- <img src="../images/Tom_circa_1980.jpg"  onerror="this.onerror=null;this.src='../images/TomSpeaking.jpg'" class="cardImage" alt="Tom In front of Thornton Dial Painting"/> -->
-              <div class="cardFooter">
-                  Augue neque gravida in fermentum. Convallis a cras semper auctor neque vitae tempus quam. 
-              </div>
-            </div>
-      </div>
-
-      <div class="frontPageCard">
-          <div class="cardImageContainer" style="background-image: url('../images/Tom_inFrontOf_ERROR.jpg'); -webkit-filter: blur(5px);  filter: blur(5px);">
-              <!-- <img src="../images/Tom_circa_1980.jpg"  onerror="this.onerror=null;this.src='../images/TomSpeaking.jpg'" class="cardImage" alt="Tom In front of Thornton Dial Painting"/> -->
-              <div class="cardFooter">
-                  Augue neque gravida in fermentum. Convallis a cras semper auctor neque vitae tempus quam. 
-              </div>
-            </div>
-      </div>
-
-      <div class="frontPageCard">
-          <div class="cardImageContainer" style="background-image: url('../images/Tom_inFrontOf_TDial.jpg')">
-              <!-- <img src="../images/Tom_circa_1980.jpg"  onerror="this.onerror=null;this.src='../images/TomSpeaking.jpg'" class="cardImage" alt="Tom In front of Thornton Dial Painting"/> -->
-              <div class="cardFooter">
-                  Augue neque gravida in fermentum. Convallis a cras semper auctor neque vitae tempus quam. 
-              </div>
-            </div>
-      </div>
-      <div class="frontPageCard">
-          <div class="cardImageContainer" style="background-image: url('../images/Tom_circa_1980.jpg')">
-              <!-- <img src="../images/Tom_circa_1980.jpg"  onerror="this.onerror=null;this.src='../images/TomSpeaking.jpg'" class="cardImage" alt="Tom In front of Thornton Dial Painting"/> -->
-              <div class="cardFooter">
-                  Augue neque gravida in fermentum. Convallis a cras semper auctor neque vitae tempus quam. 
-              </div>
-            </div>
-      </div>
-
-
-
-      <div class="frontPageCard">
-          <div class="cardImageContainer">
-              <img src="../images/Tom_inFrontOf_ERROR.jpg"  onerror="this.onerror=null;this.src='../images/TomSpeaking.jpg'" class="cardImage" alt="Tom In front of Thornton Dial Painting"/>
-            </div>
-        <div class="cardFooter">
-            Augue neque gravida in fermentum. Convallis a cras semper auctor neque vitae tempus quam. 
-        </div>
-      </div>
-
-      
-      <div class="frontPageCard">
-          <div class="cardImageContainer">
-              <img src="../images/Tom_inFrontOf_ERROR.jpg"  onerror="this.onerror=null;this.src='../images/TomSpeaking.jpg'" class="cardImage" alt="Tom In front of Thornton Dial Painting"/>
-            </div>
-          <div class="cardFooter">
-              Augue neque gravida in fermentum. Convallis a cras semper auctor neque vitae tempus quam. 
-          </div>
-        </div>
-
-      <div class="spacer"></div>
-  </div>
-
-        <script src='./top-nav.js'></script>
-        <script src='../app.js'></script>
-
-    <script>
-
-
-    </script>
-</body>
+  </body>
 </html>

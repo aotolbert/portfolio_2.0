@@ -19,8 +19,8 @@ router.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "../app/index.html"));
 })
 
-router.get("/offline", (req, res) => {
-    res.sendFile(path.join(__dirname, "../app/offline.html"));
+router.get("/upcoming", (req, res) => {
+    res.sendFile(path.join(__dirname, "../app/upcoming.html"));
 })
 
 router.get("/about", (req, res) => {

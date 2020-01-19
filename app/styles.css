@@ -94,6 +94,10 @@
   min-width: 10vw;
 }
 
+.mainImageHolder {
+  contain: content;
+}
+
 
   .frontPageCard div:hover {
     /* Toggle our animation play state to running when we are hovering over our sticker */
@@ -309,6 +313,62 @@
     width: 100%;
   }
 
+  .memoirCover {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 100%;
+    margin-left: 10p;
+    border-radius: 25px;
+    min-width: 250px;
+  }
+
+  .memoirContainer {
+    width: 100vw;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: inset grey 0px 0px 5px 0px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+  }
+
+  .memoirImageHolder {
+    width: 25vw;
+    padding: 10px;
+    min-width: 300px;
+
+  }
+
+  .memoirDescriptionContainer {
+    font-size: 5rem;
+    width: 60vw;
+    padding: 50px;
+  }
+
+  .workItemsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-between;
+  }
+
+  .workItem {
+    contain: content;
+    margin: 25px;
+    width: 20vw;
+    height: 30vw;
+    min-width: 300px;
+    min-height: 450px;
+    border-radius: 5px;
+    box-shadow: #80808054 2px 2px 2px 0px;
+  }
+
+  .workItemImage {
+    width: auto;
+    height: 100%;
+  }
+
 
   /* **************** HEADER TRANSITIONS AND ANIMATIONS **************** */
 
@@ -521,6 +581,12 @@
     padding-top: 20vh;
     text-align: center;
     margin-top: 0px !important;
+  }
+
+  .memoirDescriptionContainer {
+    font-size: medium;
+    width: 60vw;
+    padding: 50px;
   }
 
 }
