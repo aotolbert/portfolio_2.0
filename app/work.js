@@ -71,10 +71,20 @@ function addElement () {
         image.classList.add('workItemImage');
         image.src = `../images/${item.imageTitle}`;
 
+
+        var blurb = document.createElement("div"); 
+        blurb.classList.add('workItemBlurb');
+        blurb.classList.add('invisibleBlurb');
+
+        var text = document.createTextNode(item.info);
+
+        blurb.appendChild(text);
         // and give it some content 
-        var newContent = document.createTextNode(item.imageTitle); 
+        // var newContent = document.createTextNode(item.imageTitle); 
         // add the text node to the newly created div
-        newDiv.appendChild(newContent);  
+
+
+        newDiv.appendChild(blurb);  
         newDiv.appendChild(image);
 
         // add the newly created element and its content into the DOM 

@@ -341,7 +341,7 @@
   }
 
   .memoirDescriptionContainer {
-    font-size: 5rem;
+    font-size: large;
     width: 60vw;
     padding: 50px;
   }
@@ -369,6 +369,30 @@
     height: 100%;
   }
 
+  .workItemBlurb {
+    background-color: grey;
+    opacity: 0;
+    /* visibility: hidden; */
+    height: 100%;
+    width: 100%;
+    position: absolute;  
+    padding: 15px;
+  }
+
+  .workItemBlurb:hover {
+    /* background-color: red; */
+    animation: showItemBlurb 0.5s forwards;
+  }
+
+  .workItemBlurb:hover + span {
+    background-color: red;
+    /* animation: showItemBlurb 1s forwards; */
+  }
+
+  @keyframes showItemBlurb {
+    0% {opacity: 0.4; }
+    100% {opacity: 0.8; }
+  }
 
   /* **************** HEADER TRANSITIONS AND ANIMATIONS **************** */
 

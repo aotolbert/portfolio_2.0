@@ -1,3 +1,5 @@
+
+
 .imageCaptionContainerLeft {
     z-index: -1;
     contain: content;
@@ -25,6 +27,7 @@
     bottom: -25vh;
     left: 20vw;
 }
+
 
 .mainImgLeftContainerBefore {
     opacity: 0;
