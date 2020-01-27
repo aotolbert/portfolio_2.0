@@ -354,6 +354,7 @@
   }
 
   .workItem {
+    overflow: hidden;
     contain: content;
     margin: 25px;
     width: 20vw;
@@ -393,6 +394,31 @@
     0% {opacity: 0.4; }
     100% {opacity: 0.8; }
   }
+
+  .previewEssay {
+    color: #333;
+    top: 0;
+    z-index: 2;
+    position: static;
+    max-height: 0vh;
+    width: 100vw;
+  }
+
+  .previewEssay.expand {
+    max-height: 100vh;
+    height: 100vh;
+    transition: max-height 0.75s ease-in;
+  }
+  
+
+
+
+  @keyframes blurBackground {
+    0% {height: 0vh; }
+    100% {opacity: 100vh; }
+  }
+
+
 
   /* **************** HEADER TRANSITIONS AND ANIMATIONS **************** */
 
