@@ -96,6 +96,8 @@
 
 .mainImageHolder {
   contain: content;
+  display: flex;
+  justify-content: center;
 }
 
 
@@ -116,8 +118,17 @@
   .headerText {
     padding-top: 12vh;
     text-align: left;
+    padding-left: 4vw;
+    margin-top: 0px !important;
+    font-size: 4em;
+    margin-bottom: 10px;
+  }
+
+  .headerSubText {
+    text-align: left;
     padding-left: 5vw;
     margin-top: 0px !important;
+    font-size: 2em;
   }
 
 
@@ -162,10 +173,15 @@
   }
 
   .frontPageTextBox {
+    font-size: 4vmin;
     padding-bottom: 5vh;
     padding-left: 5vw;
     margin-top: 30vh;
     padding-right: 5vw;
+  }
+
+  .largeQuotes {
+    font-size: 2em;
   }
 
   @keyframes pullOutCard {
@@ -410,7 +426,13 @@
     transition: max-height 0.75s ease-in;
   }
   
-
+  .closePreviewEssay {
+    height : 25px;
+    top: 0;
+    margin: 15px;
+    background-color: red;
+    color: black;
+  }
 
 
   @keyframes blurBackground {

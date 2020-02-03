@@ -70,6 +70,7 @@ function renderEssayPreviewDiv(essay) {
 
     let button = document.createElement('button');
     button.classList.add('closePreviewEssay');
+    button.innerText = "Close Preview";
     newDiv.appendChild(button);
     
     var embed = document.createElement("embed"); 
