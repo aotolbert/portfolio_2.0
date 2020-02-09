@@ -285,30 +285,51 @@
 
 
   .contactFormContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 10vw;
     width: 100%;
   }
 
-  .contactForm {
+  /* #contactForm {
     padding: 5%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     width: 80vw;
+  } */
+
+  /* #emailContentTextField {
+    height: 25vh;
+    padding: 5px;
+    width: 100%;
+    margin: 15px;
+  } */
+
+  .formRow {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
   }
 
-  input {
+  .formRow > label {
+    width: 100%;
     padding: 5px;
     margin: 15px;
     min-width: 200px;
   }
 
+
+  input {
+    padding: 5px;
+    margin-left: 15px;
+    min-width: 200px;
+  }
+
   .inputFieldType1 {
-    width: 45%;
-    max-width: 45vw;
+    flex-grow: 2;
+    width: 38vw;
+    min-width: 250px;
     height: 30px;
   }
 
@@ -317,7 +338,7 @@
     height: 30px;
   }
 
-  input[type="submit"] {
+  button[type="submit"] {
     width: 100%;
     height: 50px;
     background-color: forestgreen;
