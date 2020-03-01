@@ -109,7 +109,7 @@
 
 
   .frontPageTextBoxHeader {
-    height: 15vh;
+    height: 30vh;
     padding-left: 5vw;
     padding-right: 55vw;
   }
@@ -176,13 +176,11 @@
     font-size: 4vmin;
     padding-bottom: 5vh;
     padding-left: 5vw;
-    margin-top: 30vh;
+    margin-top: 15vh;
     padding-right: 5vw;
   }
 
-  .largeQuotes {
-    font-size: 2em;
-  }
+
 
   @keyframes pullOutCard {
     0% { transform: scale(1); }
@@ -642,7 +640,8 @@
 
 
   .imageCaptionText {
-      font-size: x-large;
+      margin-top: 8vh;
+      font-size: medium;
   }
 
 
@@ -664,9 +663,8 @@
   }
 
   .imageCaptionText {
-    font-size: large;
+    font-size: x-small;
 }
-
   .menu-title {
     font-size: 3vh;
   }
@@ -677,7 +675,7 @@
 
   
   .frontPageTextBoxHeader {
-    height: 35vh;
+    height: 40vh;
     padding-right: 5vw;
   }
 

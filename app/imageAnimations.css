@@ -1,48 +1,25 @@
 
-.imageCaptionContainerLeft {
-    z-index: -1;
-    contain: content;
-    padding: 5vw;
-    color: honeydew;
-    position: absolute;
-    background-color: grey;
-    height: 200px;
-    width: 70vw;
-    min-width: 250px;
-    bottom: -25vh;
-    right: 10vw;
-}
-
-.imageCaptionContainerRight {
-    z-index: -1;
-    contain: content;
-    padding: 5vw;
-    color: honeydew;
-    position: absolute;
-    background-color: grey;
-    height: 200px;
-    width: 70vw;
-    min-width: 250px;
-    bottom: -25vh;
-    left: 20vw;
-}
-
-
 .mainImgLeftContainerBefore {
     opacity: 0;
+    display: flex;
     width: 90vw;
+    height: 90vh;
     left: 70vw;
     text-align: center;  
 }
 
 .mainImgLeftContainerAfter  {
     opacity: 1;
+    height: 90vh;
+    display: flex;
     width: 90vw;
     text-align: center;  
 }
 
 .mainImgRightContainerBefore {
     opacity: 0;
+    height: 80vh;
+    display: flex;
     width: 90vw;
     right: 10vw;
     text-align: center;  
@@ -51,8 +28,57 @@
 
 .mainImgRightContainerAfter {
     opacity: 1;
+    height: 80vh;
+    display: flex;
     width: 90vw;
     text-align: center;
+}
+
+#nerveMuseumSignImgContainer {
+    height: 70vh;
+}
+
+
+
+
+.imageCaptionContainerLeft {
+    display: flex;
+    align-items: center;
+    min-height: 30vh;
+    max-height: 35vh;
+    z-index: -1;
+    contain: content;
+    padding: 5vh;
+    color: honeydew;
+    position: absolute;
+    background-color: grey;
+    width: 70vw;
+    min-width: 250px;
+    bottom: 0vh;
+    right: 8vw;
+    box-shadow: -5px 5px 8px 0px #5f5f5f;
+    height: auto;
+}
+
+
+.imageCaptionContainerRight {
+    display: flex;
+    align-items: center;
+    min-height: 25vh;
+    max-height: 30vh;
+    z-index: -1;
+    contain: content;
+    padding: 4vh;
+    color: honeydew;
+    position: absolute;
+    background-color: grey;
+    width: 70vw;
+    min-width: 250px;
+    bottom: 15vh;
+    left: 10vw;
+    box-shadow: -5px 5px 8px 0px #5f5f5f;
+    height: auto;
+    margin-left: 5vw;
 }
 
 .spacerGif {
@@ -61,22 +87,24 @@
 }
 
 .headerImgRight {
-    padding-top: 5vh;
-    padding-bottom: 5vh;
-    width: 80vw;
-    max-width: 855px;
-    /* margin-right: auto; */
-    margin-left: 20vw;
+    height: 35vh;
+    width: auto;
+    max-width: 75vw;
+    margin-left: 25vw;
+    box-shadow: -6px 3px 16px 0px grey;
 }
 
 .headerImgLeft {
-    padding-top: 5vh;
-    padding-bottom: 6vh;
-    width: 80vw;
-    max-width: 855px;
+    height: 55vh;
+    width: auto;
+    max-width: 75vw;
     margin-right: 20vw;
-    /* margin-left: auto; */
+    box-shadow: -6px 3px 16px 0px grey;}
+
+#nerveMuseumSignImgContainer > .headerImgLeft {
+    height: 35vh;
 }
+
 
 
 .fadeInRightImage {
