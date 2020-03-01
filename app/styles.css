@@ -3,7 +3,7 @@
     padding: 0;
     margin: 0;
     background: #FAFAFA;
-    font-family: Arial, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     max-width: 100%;
     -ms-overflow-style: none;
   }
@@ -126,7 +126,7 @@
 
   .headerSubText {
     text-align: left;
-    padding-left: 5vw;
+    padding-left: 4vw;
     margin-top: 0px !important;
     font-size: 2em;
   }
@@ -213,6 +213,7 @@
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
   }
+
 
   .cardFooter {
     border-top: 1px solid #333;
@@ -640,6 +641,12 @@
 
 
 
+  .imageCaptionText {
+      font-size: x-large;
+  }
+
+
+
 /* ************ MEDIA QUERIES ************ */
   
   
@@ -656,6 +663,10 @@
     box-shadow: 0px -20px 20px 0px grey; 
   }
 
+  .imageCaptionText {
+    font-size: large;
+}
+
   .menu-title {
     font-size: 3vh;
   }
@@ -666,15 +677,29 @@
 
   
   .frontPageTextBoxHeader {
-    height: 20vh;
+    height: 35vh;
     padding-right: 5vw;
   }
 
   .headerText {
+    font-size: xx-large;
     padding-top: 20vh;
+    padding-left: 0;
     text-align: center;
+    contain: size;
+    contain: content;
     margin-top: 0px !important;
   }
+
+  .headerSubText {
+    text-align: center;
+    padding: 0;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    margin-top: 0px !important;
+    font-size: 2em;
+  }
+
 
   .memoirDescriptionContainer {
     font-size: medium;
@@ -709,7 +734,7 @@
 
   
   .frontPageTextBoxHeader {
-    height: 30vh;
+    height: 25vh;
     padding-right: 5vw;
   }
 
@@ -719,6 +744,16 @@
     text-align: center;
     margin-top: 0px !important;
   }
+
+  .headerSubText {
+    text-align: center;
+    padding: 0;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: 0px !important;
+    font-size: 2em;
+  }
+
 
 }
 
@@ -749,7 +784,7 @@
     .headerText {
       padding-top: 12vh;
       text-align: left;
-      padding-left: 5vw;
+      padding-left: 2vw;
       margin-top: 0px !important;
     }
   

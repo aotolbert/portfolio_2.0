@@ -1,5 +1,4 @@
 
-
 .imageCaptionContainerLeft {
     z-index: -1;
     contain: content;
@@ -63,7 +62,7 @@
 
 .headerImgRight {
     padding-top: 5vh;
-    padding-bottom: 1vh;
+    padding-bottom: 5vh;
     width: 80vw;
     max-width: 855px;
     /* margin-right: auto; */
@@ -72,7 +71,7 @@
 
 .headerImgLeft {
     padding-top: 5vh;
-    padding-bottom: 1vh;
+    padding-bottom: 6vh;
     width: 80vw;
     max-width: 855px;
     margin-right: 20vw;
@@ -103,4 +102,3 @@
     0% {opacity: 0; }
     100% {opacity: 1; }
  }
-
