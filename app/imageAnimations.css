@@ -6,6 +6,7 @@
     height: 90vh;
     left: 70vw;
     text-align: center;  
+    padding-bottom: 10vh;
 }
 
 .mainImgLeftContainerAfter  {
@@ -14,13 +15,16 @@
     display: flex;
     width: 90vw;
     text-align: center;  
+    padding-bottom: 10vh;
+
 }
 
 .mainImgRightContainerBefore {
     opacity: 0;
     height: 80vh;
     display: flex;
-    width: 90vw;
+    justify-content: flex-end;
+    width: 100vw;
     right: 10vw;
     text-align: center;  
 }
@@ -30,7 +34,8 @@
     opacity: 1;
     height: 80vh;
     display: flex;
-    width: 90vw;
+    width: 100vw;
+    justify-content: flex-end;
     text-align: center;
 }
 
@@ -45,7 +50,7 @@
     display: flex;
     align-items: center;
     min-height: 30vh;
-    max-height: 35vh;
+    max-height: 40vh;
     z-index: -1;
     contain: content;
     padding: 5vh;
@@ -54,7 +59,7 @@
     background-color: grey;
     width: 70vw;
     min-width: 250px;
-    bottom: 0vh;
+    bottom: 5vh;    
     right: 8vw;
     box-shadow: -5px 5px 8px 0px #5f5f5f;
     height: auto;
@@ -64,8 +69,8 @@
 .imageCaptionContainerRight {
     display: flex;
     align-items: center;
-    min-height: 25vh;
-    max-height: 30vh;
+    min-height: 30vh;
+    max-height: 40vh;
     z-index: -1;
     contain: content;
     padding: 4vh;
@@ -95,7 +100,7 @@
 }
 
 .headerImgLeft {
-    height: 55vh;
+    height: 60vh;
     width: auto;
     max-width: 75vw;
     margin-right: 20vw;
@@ -125,8 +130,26 @@
     transform: translateX(10vw);
 }
 
+.imageCaptionText {
+    margin-top: 8vh;
+    font-size: medium;
+}
+
 
 @keyframes fadeInOpacity {
     0% {opacity: 0; }
     100% {opacity: 1; }
+ }
+
+
+ @media only screen and (max-device-width: 500px) {
+
+    .imageCaptionContainerLeft { 
+        bottom: 0;
+    }
+
+    .imageCaptionText {
+        font-size: x-small;
+        margin-top: 5vh;
+    }
  }
