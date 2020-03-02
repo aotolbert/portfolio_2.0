@@ -3,7 +3,7 @@
     opacity: 0;
     display: flex;
     width: 90vw;
-    height: 90vh;
+    height: 85vh;
     left: 70vw;
     text-align: center;  
     padding-bottom: 10vh;
@@ -11,7 +11,7 @@
 
 .mainImgLeftContainerAfter  {
     opacity: 1;
-    height: 90vh;
+    height: 85vh;
     display: flex;
     width: 90vw;
     text-align: center;  
@@ -21,22 +21,24 @@
 
 .mainImgRightContainerBefore {
     opacity: 0;
-    height: 80vh;
+    height: 70vh;
     display: flex;
     justify-content: flex-end;
     width: 100vw;
     right: 10vw;
     text-align: center;  
+    padding-top: 10vh;
 }
 
 
 .mainImgRightContainerAfter {
     opacity: 1;
-    height: 80vh;
+    height: 70vh;
     display: flex;
     width: 100vw;
     justify-content: flex-end;
     text-align: center;
+    padding-top: 10vh;
 }
 
 #nerveMuseumSignImgContainer {
@@ -79,7 +81,7 @@
     background-color: grey;
     width: 70vw;
     min-width: 250px;
-    bottom: 15vh;
+    bottom: 5vh;
     left: 10vw;
     box-shadow: -5px 5px 8px 0px #5f5f5f;
     height: auto;
@@ -100,11 +102,12 @@
 }
 
 .headerImgLeft {
-    height: 60vh;
+    height: 65%;
     width: auto;
-    max-width: 75vw;
+    max-width: 85vw;
     margin-right: 20vw;
-    box-shadow: -6px 3px 16px 0px grey;}
+    box-shadow: -6px 3px 16px 0px grey;
+}
 
 #nerveMuseumSignImgContainer > .headerImgLeft {
     height: 35vh;
@@ -136,6 +139,10 @@
 }
 
 
+.imageCaptionContainerRight > .imageCaptionText {
+    font-size: large;
+}
+
 @keyframes fadeInOpacity {
     0% {opacity: 0; }
     100% {opacity: 1; }
@@ -145,7 +152,11 @@
  @media only screen and (max-device-width: 500px) {
 
     .imageCaptionContainerLeft { 
-        bottom: 0;
+        bottom: -5vh;
+    }
+
+    .imageCaptionContainerRight > .imageCaptionText {
+        font-size: small;
     }
 
     .imageCaptionText {
