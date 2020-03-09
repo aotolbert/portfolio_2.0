@@ -52,7 +52,7 @@
     display: flex;
     align-items: center;
     min-height: 30vh;
-    max-height: 40vh;
+    max-height: 35vh;
     z-index: -1;
     contain: content;
     padding: 5vh;
@@ -140,7 +140,7 @@
 
 
 .imageCaptionContainerRight > .imageCaptionText {
-    font-size: large;
+    font-size: x-large;
 }
 
 @keyframes fadeInOpacity {
@@ -152,7 +152,7 @@
  @media only screen and (max-device-width: 500px) {
 
     .imageCaptionContainerLeft { 
-        bottom: -5vh;
+        bottom: 0vh;
     }
 
     .imageCaptionContainerRight > .imageCaptionText {
@@ -160,7 +160,7 @@
     }
 
     .imageCaptionText {
-        font-size: x-small;
+        font-size: xx-small;
         margin-top: 5vh;
     }
  }

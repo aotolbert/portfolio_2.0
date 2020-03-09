@@ -55,12 +55,13 @@
 
 
   .parallax { 
-    background-image: url("../images/TapestryForTheDisappearingPeople.jpg");
+    background-image: url(../images/nerve_museum_sign.jpg);
     height: 75vh;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 115vw 80vh;
+    background-position-y: top;
   }
 
 
@@ -222,6 +223,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .cardContent {
+    padding: 10vw;
+    font-size: xx-large;
   }
 
   .avoid-clicks {
@@ -441,17 +447,28 @@
   }
 
   .previewEssay.expand {
+    background-image: url(../images/grey_background_textured.jpg);
+    background-size: cover;
     max-height: 100vh;
     height: 100vh;
     transition: max-height 0.75s ease-in;
+    display: flex;
+    flex-direction: column;
   }
   
   .closePreviewEssay {
-    height : 25px;
-    top: 0;
+    height: 33px;
+    font-size: x-large;
+    margin-right: 0;
+    align-self: flex-end;
+    border: none;
     margin: 15px;
-    background-color: red;
-    color: black;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+  }
+
+  .closePreviewEssay:hover {
+    background-color: grey;
   }
 
 
@@ -649,7 +666,7 @@
     width: 74vw;
     position: absolute;
     min-height: 35vh;
-    top: 50vh;
+    top: 65vh;
     left: 13vw;
     border: 5px solid #fff;
     border-radius: 3px;
@@ -672,7 +689,7 @@
 
   .headerText {
     font-size: xx-large;
-    padding-top: 20vh;
+    padding-top: 30vh;
     padding-left: 0;
     text-align: center;
     contain: size;
@@ -788,8 +805,8 @@
     max-width: 45vw;
     max-height: 50vh;
     position: absolute;
-    top: 45vh;
-    right: 10vw;
+    top: 60vh;
+    right: 5vw;
     border: 5px solid #fff;
     border-radius: 3px;
     box-shadow: 3px 3px 8px grey;

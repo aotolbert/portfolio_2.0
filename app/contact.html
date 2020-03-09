@@ -6,10 +6,9 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
   <meta name="theme-color" content="#FF00FF">
   <title>The Nerve Museum</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="./styles.css">
   <link href="./hamburgers.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
 </head>
 <body>
     <div class="header">
@@ -81,7 +80,7 @@
         <form id="contactForm" action="POST" data-netlify="true">
             <div class="form-row">
               <div class="form-group col-md-6">
-                <label for="firstName">First Name:</label>
+                <label for="firstName">First Name</label>
                 <input type="text" id="firstName" name="firstName" placeholder="John" required class="form-control">
               </div>
               <div class="form-group col-md-6">
@@ -91,12 +90,12 @@
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                <label for="phoneNumber">Telephone:</label>
+                <label for="phoneNumber">Telephone</label>
                 <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="123-555-7891" pattern="[0-9]{10}" required class="form-control">
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="returnEmailAddress">Your Email:</label>
-                    <input type="email" id="returnEmailAddress" name="returnEmailAddress" autocomplete="off" placeholder="example@email.com" required  class="form-control"/>
+                    <label for="returnEmailAddress">Your Email Address</label>
+                    <input type="email" id="returnEmailAddress" name="returnEmailAddress" autocomplete="off" placeholder="me@email.com" required  class="form-control"/>
                 </div>
             </div>
             <div class="form-group">
@@ -112,6 +111,17 @@
           </form>
 
     </div>
+
+    <div class="footer">
+      <ul class="footerLinksContainer">
+          <li><a href="./">Home</a></li>
+          <li><a href="./about">About</a></li>
+          <li><a href="./work">My Work</a></li>
+          <li><a href="./upcoming">Upcoming</a></li>
+          <li><a href="./upcoming">Contact</a></li>
+      </ul>
+  </div>
+
     
     <script src='./top-nav.js'></script>
     <script src='./app.js'></script>
