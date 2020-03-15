@@ -197,4 +197,3 @@ function closePreview() {
     document.querySelector('.previewEssay').remove()
 }
 
-let requestURL = 'https://graph.facebook.com/1256130096/posts?access_token=EAACsgMDpuoQBAEsY2UiVqZCi0EEy8vSWpnoshnk0BOauCoxaZA5KAMvLZCQ7qZCFDiXHS6xZCKs7ZBH3wU3fMwn4FnRmKzK5hJnAKyjgpmswyu9xQmu5Op7jTcsWsvZAJ5ULYzOCFWnsYHAJAF2XJUGSSiCUzoyVDQZD';
