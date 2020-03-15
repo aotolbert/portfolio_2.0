@@ -427,8 +427,10 @@
     background-color: grey;
     opacity: 0;
     /* visibility: hidden; */
-    height: 100%;
-    width: 100%;
+    width: 20vw;
+    height: 30vw;
+    min-width: 300px;
+    min-height: 450px;
     position: absolute;  
   }
 
