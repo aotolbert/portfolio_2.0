@@ -16,7 +16,7 @@ var getWorkItemData = () => {
         {
             title: "title1",
             imageTitle: "art_along_the_bounderies.jpg",
-            info: '"Art Along the Bounderies"',
+            info: "Art Along the Bounderies",
             link: "../essays/art_along_the_bounderies.pdf"
         },
         {
@@ -86,34 +86,61 @@ var getWorkItemData = () => {
 
 function renderEssayPreviewDiv(essay) {
 
-    var existingPreview = document.querySelector('.previewEssay');
-    console.log(existingPreview);
-    if(existingPreview) {
-        var existingPreview = document.querySelector('.previewEssay').remove();
+    var userAgent = window.navigator.userAgent;
+    console.log(userAgent);
+
+    // Alter the behavior to new tab preview of the essay for users on iPad or iPhone
+    if ((userAgent.match(/iPad/i) || userAgent.match(/iPhone/i))) {
+    var clickedDiv = document.getElementById(essay.title);
+
+    // allItems.forEach.classList.remove('clickedForPreview');
+    console.log()
+        if(clickedDiv.classList.contains('clickedForPreview')) {
+            clickedDiv.classList.remove('clickedForPreview');
+            window.open(essay.link, '_blank');
+        } else {
+            var allItems = document.querySelectorAll('.workItem');
+            allItems.forEach(clearClickedTag);
+            function clearClickedTag(item, index) {
+                item.classList.remove('clickedForPreview');
+            }
+            // The click acts as a hover and displays the preview the first time
+            clickedDiv.classList.add('clickedForPreview');
+        }
+
+    } else {
+
+        //Preview the div underneath the selected essay preview card
+        var existingPreview = document.querySelector('.previewEssay');
+        console.log(existingPreview);
+        if(existingPreview) {
+            var existingPreview = document.querySelector('.previewEssay').remove();
+        }
+
+        var newDiv = document.createElement("div"); 
+        newDiv.classList.add('previewEssay');
+
+        let button = document.createElement('button');
+        button.classList.add('closePreviewEssay');
+        button.innerText = "X";
+        button.onclick = closePreview;
+        newDiv.appendChild(button);
+        
+        var embed = document.createElement("embed"); 
+        embed.src = essay.link;
+        embed.type = "application/pdf";
+        embed.width = "75%";
+        embed.height = "75%";
+        embed.style= "margin-right: auto; margin-left: auto;";
+        newDiv.appendChild(embed);  
+
+        // document.getElementsByTagName("body")[0].classList.add('stop-scrolling');
+        newDiv.appendAfter(document.querySelector(`#${essay.title}`));
+
+        var oldDiv = document.querySelector('.previewEssay');
+        oldDiv.classList.add("expand");
     }
 
-    var newDiv = document.createElement("div"); 
-    newDiv.classList.add('previewEssay');
-
-    let button = document.createElement('button');
-    button.classList.add('closePreviewEssay');
-    button.innerText = "X";
-    button.onclick = closePreview;
-    newDiv.appendChild(button);
-    
-    var embed = document.createElement("embed"); 
-    embed.src = essay.link;
-    embed.type = "application/pdf";
-    embed.width = "75%";
-    embed.height = "75%";
-    embed.style= "margin-right: auto; margin-left: auto;";
-    newDiv.appendChild(embed);  
-
-    // document.getElementsByTagName("body")[0].classList.add('stop-scrolling');
-    newDiv.appendAfter(document.querySelector(`#${essay.title}`));
-
-    var oldDiv = document.querySelector('.previewEssay');
-    oldDiv.classList.add("expand");
 
 
 }
@@ -139,8 +166,20 @@ function addElement () {
         blurb.classList.add('workItemBlurb');
         blurb.classList.add('invisibleBlurb');
 
+        var textDiv = document.createElement('div');
+        textDiv.classList.add('essayBlurbText');
         var text = document.createTextNode(item.info);
-        blurb.appendChild(text);
+        textDiv.appendChild(text);
+        blurb.appendChild(textDiv);
+
+
+        var instructionDiv = document.createElement('p');
+        instructionDiv.classList.add('previewInstructions');
+
+        var instructions = document.createTextNode('"Click to Preview"');
+        instructionDiv.appendChild(instructions);
+
+        blurb.appendChild(instructionDiv);
 
         newDiv.appendChild(blurb);  
         newDiv.appendChild(image);
@@ -157,3 +196,5 @@ function closePreview() {
     console.log('closePreview() was clicked');
     document.querySelector('.previewEssay').remove()
 }
+
+let requestURL = 'https://graph.facebook.com/1256130096/posts?access_token=EAACsgMDpuoQBAEsY2UiVqZCi0EEy8vSWpnoshnk0BOauCoxaZA5KAMvLZCQ7qZCFDiXHS6xZCKs7ZBH3wU3fMwn4FnRmKzK5hJnAKyjgpmswyu9xQmu5Op7jTcsWsvZAJ5ULYzOCFWnsYHAJAF2XJUGSSiCUzoyVDQZD';
