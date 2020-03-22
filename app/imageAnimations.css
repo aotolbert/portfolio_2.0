@@ -135,7 +135,7 @@
 
 .imageCaptionText {
     margin-top: 8vh;
-    font-size: medium;
+    font-size: larger;
 }
 
 
@@ -156,11 +156,15 @@
     }
 
     .imageCaptionContainerRight > .imageCaptionText {
-        font-size: small;
+        font-size: medium;
     }
 
     .imageCaptionText {
-        font-size: xx-small;
+        font-size: large;
         margin-top: 5vh;
+    }
+
+    #juliaSternExcerpt {
+        font-size: x-small !important;
     }
  }

@@ -112,7 +112,7 @@
   .frontPageTextBoxHeader {
     height: 30vh;
     padding-left: 5vw;
-    padding-right: 55vw;
+    padding-right: 50vw;
   }
 
 
@@ -129,7 +129,7 @@
     text-align: left;
     padding-left: 4vw;
     margin-top: 0px !important;
-    font-size: 21.5m;
+    font-size: 2em;
   }
 
 
@@ -174,7 +174,7 @@
   }
 
   .frontPageTextBox {
-    font-size: 4vmin;
+    font-size: 3vmin;
     padding-bottom: 5vh;
     padding-left: 5vw;
     margin-top: 10vh;
@@ -694,7 +694,7 @@
     width: 74vw;
     position: absolute;
     min-height: 35vh;
-    top: 65vh;
+    top: 60vh;
     left: 13vw;
     border: 5px solid #fff;
     border-radius: 3px;
