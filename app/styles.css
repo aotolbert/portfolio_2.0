@@ -56,11 +56,11 @@
 
   .parallax { 
     background-image: url(../images/nerve_museum_sign.jpg);
-    height: 75vh;
+    height: 70vh;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 115vw 80vh;
+    background-size: 115vw 75vh;
     background-position-y: top;
   }
 
@@ -119,7 +119,7 @@
   .headerText {
     padding-top: 12vh;
     text-align: left;
-    padding-left: 4vw;
+    padding-left: 0vw;
     margin-top: 0px !important;
     font-size: 4em;
     margin-bottom: 10px;
@@ -338,7 +338,7 @@
 
   input {
     padding: 5px;
-    margin-left: 15px;
+    margin-left: 0px;
     min-width: 200px;
   }
 
@@ -694,7 +694,7 @@
     width: 74vw;
     position: absolute;
     min-height: 35vh;
-    top: 60vh;
+    top: 55vh;
     left: 13vw;
     border: 5px solid #fff;
     border-radius: 3px;
@@ -765,7 +765,7 @@
     max-height: 55vh;
     min-height: 50vh;
     position: absolute;
-    top: 35vh;
+    top: 30vh;
     /* right: 40vw; */
     left: 13vw;
     border: 5px solid #fff;
@@ -814,7 +814,7 @@
       max-width: 50vw;
       max-height: 50vh;
       position: absolute;
-      top: 50vh;
+      top: 45vh;
       right: 8vw;
       border: 5px solid #fff;
       border-radius: 3px;
@@ -833,7 +833,7 @@
     .headerText {
       padding-top: 12vh;
       text-align: left;
-      padding-left: 2vw;
+      padding-left: 0vw;
       margin-top: 0px !important;
     }
   
@@ -848,7 +848,7 @@
     max-width: 45vw;
     max-height: 50vh;
     position: absolute;
-    top: 60vh;
+    top: 55vh;
     right: 5vw;
     border: 5px solid #fff;
     border-radius: 3px;

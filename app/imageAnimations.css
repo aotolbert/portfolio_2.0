@@ -6,7 +6,7 @@
     height: 85vh;
     left: 70vw;
     text-align: center;  
-    padding-bottom: 10vh;
+    padding-bottom: 0vh;
 }
 
 .mainImgLeftContainerAfter  {
@@ -15,7 +15,7 @@
     display: flex;
     width: 90vw;
     text-align: center;  
-    padding-bottom: 10vh;
+    padding-bottom: 0vh;
 
 }
 
@@ -29,6 +29,11 @@
     text-align: center;  
     padding-top: 10vh;
 }
+
+.mainImgLeftContainerLarge  {
+    padding-bottom: 12vh !important;
+}
+
 
 
 .mainImgRightContainerAfter {
@@ -47,11 +52,10 @@
 
 
 
-
 .imageCaptionContainerLeft {
     display: flex;
     align-items: center;
-    min-height: 30vh;
+    min-height: 20vh;
     max-height: 35vh;
     z-index: -1;
     contain: content;
@@ -87,6 +91,7 @@
     height: auto;
     margin-left: 5vw;
 }
+
 
 .spacerGif {
     min-width: 15vw;
