@@ -18,6 +18,10 @@
     height: 100%;
     overflow: hidden;
   }
+
+  p {
+    text-indent: 20px;;
+  }
   
   .header {
     min-height: 45px;
@@ -127,7 +131,6 @@
 
   .headerSubText {
     text-align: left;
-    padding-left: 4vw;
     margin-top: 0px !important;
     font-size: 2em;
   }
@@ -177,7 +180,7 @@
     font-size: 3vmin;
     padding-bottom: 5vh;
     padding-left: 5vw;
-    margin-top: 10vh;
+    margin-top: 15vh;
     padding-right: 5vw;
   }
 
@@ -366,17 +369,15 @@
     width: 100%;
   }
 
-  .memoirCover {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    width: 100%;
-    margin-left: 10p;
-    border-radius: 25px;
-    min-width: 250px;
-  }
 
   .memoirContainer {
-    width: 100vw;
+    background-image: url("./images/dark_background.jpg");
+    width: 80vw;
+    height: 90vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
     display: flex;
     margin-left: auto;
     margin-right: auto;
@@ -384,6 +385,7 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: stretch;
+    margin-top: 10vh;
   }
 
   .memoirImageHolder {
@@ -394,9 +396,13 @@
   }
 
   .memoirDescriptionContainer {
-    font-size: large;
+    font-size: 2vmin;
     width: 60vw;
     padding: 50px;
+  }
+
+  .memoirIframe {
+    z-index: 2;
   }
 
   .workItemsContainer {
@@ -701,6 +707,24 @@
     box-shadow: 0px -20px 20px 0px grey; 
   }
 
+  .memoirCover {
+    width: 80vw;
+    position: absolute;
+    top: 40vh;
+    /* margin-left: auto; */
+    right: 10vw;
+    /* margin-right: auto; */
+    border: 5px solid #fff;
+    border-radius: 3px;
+    box-shadow: 3px 3px 8px grey;
+  }
+
+  .memoirContainer {
+    height: 0px !important;
+    display: none;
+    visibility: hidden;
+  }
+
   .menu-title {
     font-size: 3vh;
   }
@@ -711,6 +735,7 @@
 
   
   .frontPageTextBoxHeader {
+    font-size: 2.5vmin;
     height: 40vh;
     padding-right: 5vw;
   }
@@ -773,6 +798,24 @@
     box-shadow: 3px 3px 8px grey;
   }
 
+  .memoirCover {
+    width: 80vw;
+    position: absolute;
+    top: 40vh;
+    /* margin-left: auto; */
+    right: 10vw;
+    /* margin-right: auto; */
+    border: 5px solid #fff;
+    border-radius: 3px;
+    box-shadow: 3px 3px 8px grey;
+  }
+
+  .memoirContainer {
+    height: 0px !important;
+    display: none;
+    visibility: hidden;
+  }
+
   .menu-title {
     font-size: 4vh;
   }
@@ -821,6 +864,27 @@
       box-shadow: 3px 3px 8px grey;
     }
 
+    .memoirCover {
+      border-radius: 25px;
+      min-width: 25vw;
+      min-height: 55vh;
+      max-width: 30vw;
+      max-height: 60vh;
+      position: absolute;
+      top: 40vh;
+      right: 8vw;
+      border: 5px solid #fff;
+      border-radius: 3px;
+      box-shadow: 3px 3px 8px grey;
+    }
+  
+  
+
+    .memoirContainer {
+      height: 0px !important;
+      display: none;
+      visibility: hidden;
+    }  
   
     .frontPageTextBoxHeader {
       height: 30vh;
@@ -854,4 +918,19 @@
     border-radius: 3px;
     box-shadow: 3px 3px 8px grey;
   }
+
+  .memoirCover {
+    border-radius: 25px;
+    min-width: 25vw;
+    min-height: 55vh;
+    max-width: 30vw;
+    max-height: 60vh;
+    position: absolute;
+    top: 40vh;
+    right: 8vw;
+    border: 5px solid #fff;
+    border-radius: 3px;
+    box-shadow: 3px 3px 8px grey;
+  }
+
 }
