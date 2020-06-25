@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "dev": "node server.js",
-    "build": "npm build"
+    "build": "npm run build"
   },
   "author": "https://github.com/aotolbert",
   "license": "ISC",
