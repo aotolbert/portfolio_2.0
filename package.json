@@ -1,7 +1,7 @@
 {
   "name": "nerve-museum",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is a website that outlines the work of Tom Patterson",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
