@@ -11,22 +11,13 @@
   "author": "https://github.com/aotolbert",
   "license": "ISC",
   "dependencies": {
-    "acorn": "^7.1.1",
     "body-parser": "^1.19.0",
-    "del": "^5.1.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "fs": "0.0.1-security",
-    "minimist": "^1.2.5",
-    "mkdirp": "^0.5.1",
     "mz": "^2.7.0",
-    "node-deeplink": "^0.5.0",
     "path": "^0.12.7",
     "requirejs": "^2.3.6",
-    "static-module": "^3.0.3",
     "util": "^0.12.1"
-  },
-  "devDependencies": {
-    "nodemon": "^1.19.4"
   }
 }

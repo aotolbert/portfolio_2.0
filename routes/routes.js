@@ -1,10 +1,6 @@
-const util = require('util');
 const fs = require('fs');
-var staticModule = require('static-module')
 const express = require('express');
 var path = require("path");
-//var sendEmail = require("../functions/send-contact-email");
-// const nodemailer = require('nodemailer');
 require('dotenv').config();
 
 const router = express.Router();
