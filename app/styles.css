@@ -23,40 +23,6 @@
     text-indent: 20px;;
   }
   
-  .header {
-    min-height: 45px;
-    width: 100%;
-    height: 10vh;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
-    background: #333;
-    color: #FFF;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0 16px;
-    position: fixed;
-    z-index: 3;
-  }
-
-  .header-compacted {
-    max-height: 10vh !important;
-  }
-
-
-  .header-expanded {
-    width: 100%;
-    height: 85vh;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
-    background: #333;
-    color: #FFF;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0 16px;
-    z-index: 3;
-  }
-  
-
 
   .parallax { 
     background-image: url(../images/nerve_museum_sign.jpg);
@@ -238,29 +204,6 @@
   }
 
   
-  .header-content li {
-    height: 10vh;
-    line-height: 10vh;
-    padding-left: 15vw;
-    padding-right: 15vw;
-    font-size: 3rem;
-    color: #CCC;
-  }
-
-  .hidden li {
-    pointer-events: none;
-  }
-  
-  .header-content li:hover {
-    background: #CCC;
-  }
-
-  .header-content li a {
-    color: white;
-    text-decoration: none; /* no underline */
-    display: block;
-  }
-
 
   .footer {
     height: 15vh;
@@ -513,180 +456,6 @@
 
 
 
-  /* **************** HEADER TRANSITIONS AND ANIMATIONS **************** */
-
-  /* Transforming the header */
-  .transformNavUp {
-    height: 85vh;
-    animation: transformNavTop 1s;
-  }
-
-  @keyframes transformNavTop {
-    0% { transform: translateY(0vh); }
-    100% { transform: translateY(-75vh); }
-  }
-
-  .transformNavDown {
-    animation: transformNavBottom 1s;
-    min-height: 85vh;
-  }
-
-  @keyframes transformNavBottom {
-    0% { transform: translateY(-75vh); }
-    100% { transform: translateY(0vh); }
-  }
-
-  .titleFadeIn {
-    animation: fadeTitleIn 1s;
-    opacity: 1;
-  }
-
-  @keyframes fadeTitleIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-
-  .titleFadeOut {
-    animation: fadeTitleOut 1s;
-    opacity: 0;
-  }
-
-  @keyframes fadeTitleOut {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
-  }
-  
-  .header-content {
-    padding-top: 32px;
-    flex: 1;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    overflow-x: hidden;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .header-content.hidden {
-    opacity: 0;
-  }
-
-  .header-content.hide li #header1 {
-    animation: hideHeaderList1 1s;
-  }
-
-  @keyframes hideHeaderList1 {
-    0% {opacity: 1;}
-    25% {opacity: .1;}
-    50% {opacity: 0;}
-    100% {opacity: 0;}
-  }
-
-  .header-content.hide li #header2 {
-    animation: hideHeaderList2 1s;
-  }
-
-  @keyframes hideHeaderList2 {
-    0% {opacity: 1;}
-    25% {opacity: .2;}
-    50% {opacity: 0;}
-    100% {opacity: 0;}
-  }
-
-  .header-content.hide li #header3 {
-    animation: hideHeaderList3 1s;
-  }
-
-
-  @keyframes hideHeaderList3 {
-    0% {opacity: 1;}
-    25% {opacity: .3;}
-    50% {opacity: 0;}
-    100% {opacity: 0;}
-  }
-
-  .header-content.hide li #header4 {
-    animation: hideHeaderList4 1s;
-  }
-
-  @keyframes hideHeaderList4 {
-    0% {opacity: 1;}
-    25% {opacity: .4;}
-    50% {opacity: .1;}
-    100% {opacity: 0;}
-  }
-  
-  .header-content.hide li #header5 {
-    animation: hideHeaderList5 1s;
-  }
-
-  @keyframes hideHeaderList5 {
-    0% {opacity: 1;}
-    25% {opacity: .5;}
-    50% {opacity: .1;}
-    100% {opacity: 0;}
-  }
-  
-
-
-  .header-content.reveal li #header1 {
-    animation: revealHeaderItem1 1s;
-  }
-
-  @keyframes revealHeaderItem1 {
-    0% {opacity: 0;}
-    50% {opacity: .1;}
-    100% {opacity: 1;}
-  }
-
-  .header-content.reveal li #header2 {
-    animation: revealHeaderItem2 1s;
-  }
-
-  @keyframes revealHeaderItem2 {
-    0% {opacity: 0;}
-    25% {opacity: 0;}
-    50% {opacity: .2;}
-    100% {opacity: 1;}
-  }
-  .header-content.reveal li #header3 {
-    animation: revealHeaderItem3 1s;
-  }
-
-  @keyframes revealHeaderItem3 {
-    0% {opacity: 0;}
-    25% {opacity: .1;}
-    50% {opacity: .2;}
-    100% {opacity: 1;}
-  }
-
-  .header-content.reveal li #header4 {
-    animation: revealHeaderItem4 1s;
-  }
-
-  @keyframes revealHeaderItem4 {
-    0% {opacity: 0;}
-    25% {opacity: .1;}
-    50% {opacity: .4;}
-    100% {opacity: 1;}
-  }
-  
-
-  .header-content.reveal li #header5 {
-    animation: revealHeaderItem5 1s;
-  }
-
-  @keyframes revealHeaderItem5 {
-    0% {opacity: 0;}
-    25% {opacity: .1;}
-    50% {opacity: .4;}
-    100% {opacity: 1;}
-  }
-  
-
-
-
-
 
 
 
@@ -727,10 +496,6 @@
 
   .menu-title {
     font-size: 3vh;
-  }
-
-  .header-content li {
-    font-size: 2rem;
   }
 
   
@@ -818,10 +583,6 @@
 
   .menu-title {
     font-size: 4vh;
-  }
-
-  .header-content li {
-    font-size: 2rem;
   }
 
   
