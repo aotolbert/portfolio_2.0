@@ -91,7 +91,7 @@
     text-align: left;
     padding-left: 0vw;
     margin-top: 0px !important;
-    font-size: 4em;
+    font-size: 3.5em;
     margin-bottom: 10px;
   }
 
@@ -117,30 +117,6 @@
     outline: none !important;
   }
 
-  .menu-button {
-    outline: none !important;
-    position: fixed;
-    top: 0;
-    padding-top: 3.5vh;
-    height: 10vh;
-    padding-right: 1vw;
-    right: 15px;
-    z-index: 4;
-
-  }
-
-  .menu-title {
-    outline: none !important;
-    position: fixed;
-    color: #CCC;
-    height: 10vh;
-    font-size: 5vh;
-    top: 0vh;
-    margin: 0;
-    line-height: 10vh;
-    left: 15vw;
-    z-index: 4;
-  }
 
   .frontPageTextBox {
     font-size: 3vmin;
@@ -463,7 +439,7 @@
 /* ************ MEDIA QUERIES ************ */
   
   
-/* iPads (portrait and landscape) ----------- */
+/* Phones and Handhelds ----------- */
 @media only screen and (max-device-width : 500px) {
   .profileImg {
     width: 74vw;
@@ -494,9 +470,6 @@
     visibility: hidden;
   }
 
-  .menu-title {
-    font-size: 3vh;
-  }
 
   
   .frontPageTextBoxHeader {
@@ -580,11 +553,6 @@
     display: none;
     visibility: hidden;
   }
-
-  .menu-title {
-    font-size: 4vh;
-  }
-
   
   .frontPageTextBoxHeader {
     height: 25vh;
