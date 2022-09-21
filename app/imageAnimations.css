@@ -55,13 +55,13 @@
 .imageCaptionContainerLeft {
     display: flex;
     align-items: center;
-    min-height: 20vh;
+    min-height: 35%;
     max-height: 35vh;
     z-index: -1;
     contain: content;
     padding: 5vh;
     color: honeydew;
-    position: absolute;
+    position: fixed;
     background-color: grey;
     width: 70vw;
     min-width: 250px;
@@ -75,13 +75,13 @@
 .imageCaptionContainerRight {
     display: flex;
     align-items: center;
-    min-height: 30vh;
+    min-height: 35%;
     max-height: 40vh;
     z-index: -1;
     contain: content;
     padding: 4vh;
     color: honeydew;
-    position: absolute;
+    position: fixed;
     background-color: grey;
     width: 70vw;
     min-width: 250px;
@@ -140,7 +140,7 @@
 
 .imageCaptionText {
     margin-top: 8vh;
-    font-size: larger;
+    font-size: x-large;
 }
 
 

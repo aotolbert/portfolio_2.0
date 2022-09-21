@@ -478,6 +478,16 @@
     padding-right: 5vw;
   }
 
+
+
+  .individualWorkItems {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+
   .headerText {
     font-size: xx-large;
     padding-top: 30vh;

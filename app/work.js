@@ -10,70 +10,90 @@ Element.prototype.appendBefore = function (element) {
 
 
 
-var getWorkItemData = () => {
+var getIndividualWorkItemData = () => {
     //Query for the data
     var data = [
         {
+            artist:"John Doe",
             title: "title1",
             imageTitle: "art_along_the_bounderies.jpg",
             info: "Art Along the Bounderies",
             link: "../essays/art_along_the_bounderies.pdf"
         },
         {
+            artist:"John Doe",
             title: "title2",
             imageTitle: "girl_with_a_pear_earring.jpg",
             info: '"Dust Storms in the Parallel Universe"',
             link: "../essays/dust_storms_in_the_parallel_universe.pdf"
         },
         {
+            artist:"John Doe",
             title: "title3",
             imageTitle: "starry_night.jpg",
             info: '"Goodbye Georgia Blizzard"',
             link: "../essays/goodbye_georgia_blizzard.pdf"
         },
         {
+            artist:"John Doe",
             title: "title4",
             imageTitle: "raymond_of_poitiers.jpg",
             info: '"High Art for New Millennium"',
             link: "../essays/high_art_for_new_millennium.pdf"
         },
         {
+            artist:"John Doe",
             title: "title5",
             imageTitle: "mona_lisa.jpg",
             info: '"Images and Objects from Black Deep South"',
             link: "../essays/images_and_objects_from_black_deep_south.pdf"
-        },
+        }
+    ];
+
+    return data;
+}
+
+
+var getCollectiveWorkItemData = () => {
+    //Query for the data
+    var data = [
         {
+            artist:"John Doe",
             title: "title6",
             imageTitle: "weeping_woman.jpg",
             info: '"Ingrained Images and Outside Influences"',
             link: "../essays/ingrained_images_and_outside_influences.pdf"
         },
         {
+            artist:"John Doe",
             title: "title7",
             imageTitle: "girl_with_a_pear_earring.jpg",
             info: '"James B. Lemming"',
             link: "../essays/james_b_lemming.pdf"
         },
         {
+            artist:"John Doe",
             title: "title8",
             imageTitle: "starry_night.jpg",
             info: '"Look At That"',
             link: "../essays/look_at_that.pdf"
         },
         {
+            artist:"John Doe",
             title: "title9",
             imageTitle: "weeping_woman.jpg",
             info: '"Paintbrush People and Bottlecap Thrones"',
             link: "../essays/ingrained_images_and_outside_influences.pdf"
         },
         {
+            artist:"John Doe",
             title: "title10",
             imageTitle: "girl_with_a_pear_earring.jpg",
             info: '"Paradise before and After the Fall"',
             link: "../essays/james_b_lemming.pdf"
         },
         {
+            artist:"John Doe",
             title: "title11",
             imageTitle: "starry_night.jpg",
             info: '"Revelations in Sleep Store and Wood"',
@@ -83,6 +103,8 @@ var getWorkItemData = () => {
 
     return data;
 }
+
+
 
 function renderEssayPreviewDiv(essay) {
 
@@ -147,49 +169,69 @@ function renderEssayPreviewDiv(essay) {
 
 function addElement () { 
 
-    var workItems = getWorkItemData();
+    var workItems = getIndividualWorkItemData();
 
     console.log(workItems);
 
     workItems.forEach(item => {
         // create a new div element 
-        var newDiv = document.createElement("div"); 
-        newDiv.id = item.title;
-        newDiv.classList.add('workItem');
-
-        var image = document.createElement("img"); 
-        image.classList.add('workItemImage');
-        image.src = `../images/${item.imageTitle}`;
-
-
-        var blurb = document.createElement("div"); 
-        blurb.classList.add('workItemBlurb');
-        blurb.classList.add('invisibleBlurb');
-
-        var textDiv = document.createElement('div');
-        textDiv.classList.add('essayBlurbText');
-        var text = document.createTextNode(item.info);
-        textDiv.appendChild(text);
-        blurb.appendChild(textDiv);
-
-
-        var instructionDiv = document.createElement('p');
-        instructionDiv.classList.add('previewInstructions');
-
-        var instructions = document.createTextNode('"Click to Preview"');
-        instructionDiv.appendChild(instructions);
-
-        blurb.appendChild(instructionDiv);
-
-        newDiv.appendChild(blurb);  
-        newDiv.appendChild(image);
-
-        newDiv.addEventListener('click', function(){renderEssayPreviewDiv(item)}, false);
-
+        let newDiv = buildWorkItemDiv(item);
         // add the newly created element and its content into the DOM 
-        document.querySelector('.workItemsContainer').appendChild(newDiv);
+        document.getElementById('individualWorkItems').appendChild(newDiv);
+
+        // document.querySelector('#collectiveWorkItems').appendChild(newDiv);
     });
 
+    var collectiveWorkItems = getCollectiveWorkItemData();
+
+    console.log(collectiveWorkItems);
+
+    collectiveWorkItems.forEach(collectiveItem => {
+        // create a new div element 
+        let newDiv = buildWorkItemDiv(collectiveItem);
+        // add the newly created element and its content into the DOM 
+        document.getElementById('collectiveWorkItems').appendChild(newDiv);
+
+        // document.querySelector('#collectiveWorkItems').appendChild(newDiv);
+    });
+
+
+}
+
+function buildWorkItemDiv(item) {
+    var newDiv = document.createElement("div"); 
+    newDiv.id = item.title;
+    newDiv.classList.add('workItem');
+
+    var image = document.createElement("img"); 
+    image.classList.add('workItemImage');
+    image.src = `../images/${item.imageTitle}`;
+
+
+    var blurb = document.createElement("div"); 
+    blurb.classList.add('workItemBlurb');
+    blurb.classList.add('invisibleBlurb');
+
+    var textDiv = document.createElement('div');
+    textDiv.classList.add('essayBlurbText');
+    var text = document.createTextNode(item.info);
+    textDiv.appendChild(text);
+    blurb.appendChild(textDiv);
+
+
+    var instructionDiv = document.createElement('p');
+    instructionDiv.classList.add('previewInstructions');
+
+    var instructions = document.createTextNode('"Click to Preview"');
+    instructionDiv.appendChild(instructions);
+
+    blurb.appendChild(instructionDiv);
+
+    newDiv.appendChild(blurb);  
+    newDiv.appendChild(image);
+
+    newDiv.addEventListener('click', function(){renderEssayPreviewDiv(item)}, false);
+    return newDiv;
 }
 
 function closePreview() {
