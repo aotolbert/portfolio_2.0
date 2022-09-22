@@ -199,6 +199,7 @@ function addElement () {
 }
 
 function buildWorkItemDiv(item) {
+
     var newDiv = document.createElement("div"); 
     newDiv.id = item.title;
     newDiv.classList.add('workItem');
