@@ -125,6 +125,7 @@
 
 .imgClass {
     height: 100%;
+    max-width: 80vw;
     width: auto;
 }
 
