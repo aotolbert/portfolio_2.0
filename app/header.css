@@ -33,10 +33,11 @@
   
   .header-content li {
     height: 10vh;
+    white-space: nowrap;
     line-height: 10vh;
     padding-left: 15vw;
     padding-right: 15vw;
-    font-size: 3rem;
+    font-size: 1.5rem;
     color: #CCC;
   }
 
@@ -48,9 +49,6 @@
     background: #CCC;
   }
 
-  .header-content li {
-    font-size: 2rem;
-  }
 
   .header-content li a {
     color: white;
@@ -63,7 +61,7 @@
     position: fixed;
     color: #CCC;
     height: 10vh;
-    font-size: 5vh;
+    font-size: 5vw;
     top: 0vh;
     margin: 0;
     line-height: 10vh;
@@ -259,13 +257,13 @@
 
 @media only screen and (max-device-width : 500px) {
     .menu-title {
-        font-size: 3vh;
+        font-size: 4vw;
         }
 }
 
 
 @media only screen and (min-device-width : 501px) and (max-device-width : 767px) {
 .menu-title {
-    font-size: 4vh;
+    font-size: 5vw;
     }
 }        
